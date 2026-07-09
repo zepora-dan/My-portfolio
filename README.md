@@ -59,4 +59,4 @@ A backend implementation showcasing secure user authentication systems mapping d
 I am actively searching for **Software Engineering Internships** and **Junior Full-Stack Developer** roles where I can apply my deep focus on bot automation, interface security, and data engine construction. 
 
 - 📫 **Let's Connect:** [github.com/zepora-dan](https://github.com/zepora-dan)
-- 💼 **Professional Email:** Zporadan@gmail.com
+- 💼 **Professional Email:** zporadan@gmail.com
