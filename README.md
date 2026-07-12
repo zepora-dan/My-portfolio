@@ -52,11 +52,16 @@ A backend implementation showcasing secure user authentication systems mapping d
 - **Architecture Highlights:** Hashed password verification loops, secure query structuring to block external intrusion.
 - **Tech Stack:** Python/Node.js, SQL Database Layer.
 
----
+---## Featured Projects
+
+### [FinFlow](https://github.com/zepora-dan/finflow)
+* **Tech Stack:** Flutter, SQLite, Dart
+* **Database Management:** Engineered a robust local data persistence layer using **SQLite**. 
+* **Key Implementation:** Designed a Singleton database helper to manage connection pooling, data integrity, and relational mapping, proving hands-on experience in structured data architecture.
 
 ## 🚀 Professional Career Focus & Objectives
 
 I am actively searching for **Software Engineering Internships** and **Junior Full-Stack Developer** roles where I can apply my deep focus on bot automation, interface security, and data engine construction. 
 
 - 📫 **Let's Connect:** [github.com/zepora-dan](https://github.com/zepora-dan)
-- 💼 **Professional Email:** zporadan@gmail.com
+- 💼 **Professional Email:** zeporadan@gmail.com
