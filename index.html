@@ -916,7 +916,7 @@
         <div class="social-footer">
             <a href="https://github.com/zepora-dan" target="_blank" data-en="GitHub" data-am="ጊትሃብ">GitHub</a>
             <a href="https://t.me/zeporadan" target="_blank" data-en="Telegram" data-am="ቴሌግራም">Telegram</a>
-            <a href="mailto:zeporadan@gmail.com" data-en="Email" data-am="ኢሜይል">Email</a>
+            <a href="mailto:zeporadan@gmail.com" data-en="Email" data-am="ኢpeil">Email</a>
         </div>
     </footer>
 
@@ -947,12 +947,9 @@
                     if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
                         el.placeholder = text;
                     } else {
-                        // Preserve icon or inner HTML structure if needed, or replace text content
                         if (el.children.length === 0) {
                             el.textContent = text;
                         } else {
-                            // If element contains child elements (like arrows or icons), update text node or specific attributes
-                            // For simple spans and headers:
                             el.childNodes.forEach(node => {
                                 if (node.nodeType === Node.TEXT_NODE && node.textContent.trim() !== '') {
                                     node.textContent = text;
@@ -970,14 +967,12 @@
             const fillLines = document.querySelectorAll('.progress-line-fill');
             const topBtn = document.getElementById('topBtn');
             
-            // Scroll to Top Button visibility
             if (window.scrollY > 300) {
                 topBtn.style.display = 'block';
             } else {
                 topBtn.style.display = 'none';
             }
 
-            // Skill bars fill trigger
             const rect = skillsSection.getBoundingClientRect();
             if (rect.top <= window.innerHeight && rect.bottom >= 0) {
                 fillLines.forEach(line => {
@@ -1001,28 +996,28 @@
         let charIndex = 0;
         const simulatorElem = document.getElementById('aiSimulator');
 
-        function typeMessage() {
-            if (msgIndex < aiMessages.length) {
-                if (charIndex < aiMessages[msgIndex].length) {
-                    simulatorElem.textContent += aiMessages[msgIndex].charAt(charIndex);
-                    charIndex++;
-                    setTimeout(typeMessage, 40);
-                } else {
-                    setTimeout(() => {
-                        msgIndex++;
-                        charIndex = 0;
-                        if (msgIndex < aiMessages.length) {
-                            simulatorElem.textContent = "> ";
-                            typeMessage();
-                        } else {
-                            msgIndex = 0;
-                            simulatorElem.textContent = "> ";
-                            typeMessage();
-                        }
-                    }, 2000);
-                }
-            }
-        }
+        `function typeMessage() {`
+            `if (msgIndex < aiMessages.length) {`
+                `if (charIndex < aiMessages[msgIndex].length) {`
+                    `simulatorElem.textContent += aiMessages[msgIndex].charAt(charIndex);`
+                    `charIndex++;`
+                    `setTimeout(typeMessage, 40);`
+                `} else {`
+                    `setTimeout(() => {`
+                        `msgIndex++;`
+                        `charIndex = 0;`
+                        `if (msgIndex < aiMessages.length) {`
+                            `simulatorElem.textContent = "> ";`
+                            `typeMessage();`
+                        `} else {`
+                            `msgIndex = 0;`
+                            `simulatorElem.textContent = "> ";`
+                            `typeMessage();`
+                        `}`
+                    `}, 2000);`
+                `}`
+            `}`
+        `}`
 
         window.addEventListener('DOMContentLoaded', () => {
             simulatorElem.textContent = "> ";
