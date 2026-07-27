@@ -264,6 +264,20 @@
             object-position: center;
         }
 
+        .profile-fallback {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
         .btn {
             background-color: var(--primary);
             color: #121212;
@@ -676,7 +690,7 @@
     <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
-            <h1><span data-en="Hi am" data-am="ሰላም እኔ">Hi am</span> <span style="color:var(--primary);">Deborah</span></h1>
+            <h1><span data-en="Hi, am" data-am="ሰላም እኔ">Hi, am</span> <span style="color:var(--primary);">Deborah</span></h1>
             <h2 data-en="Software Engineering Student | Full-Stack Developer" data-am="የ ሶፍትዌር ኢንጂነሪንግ ተማሪ | ፉል-ስታክ ዴቨሎፐር">Software Engineering Student | Full-Stack Developer</h2>
             <p data-en="I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions, featuring dedicated literary repositories and utility systems." data-am="ተጠቃሚዎች ሊጠቀሙባቸው የሚችሉ ዘመናዊ የድር መተግበሪያዎችን በመገንባት ላይ ያለኩ ስሜታዊ ዴቨሎፐር ነኝ።">I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions, featuring dedicated literary repositories and utility systems.</p>
             <div class="hero-buttons">
@@ -685,9 +699,10 @@
             </div>
         </div>
         <div class="hero-image-container">
-            <div class="hero-blob-frame">
-                <!-- PROFILE PICTURE: place your headshot next to this HTML file and name it profile.jpg (or update the path below) -->
-                <img src="profile.jpg" alt="Deborah Daniel">
+            <div class="hero-blob-frame" id="profileFrame">
+                <!-- PROFILE PICTURE: place your headshot next to this HTML file and name it profile.jpg (or update the src below) -->
+                <img src="profile.jpg" alt="Deborah Daniel" onerror="this.style.display='none'; document.getElementById('profileFallback').style.display='flex';">
+                <div id="profileFallback" class="profile-fallback">DD</div>
             </div>
         </div>
     </header>
@@ -849,13 +864,27 @@
             <!-- Project 3 -->
             <div class="project-card">
                 <div class="project-img-box">
-                    <div class="cover-badge" data-en="Portfolio & Utilities" data-am="ፖርትፎሊዮ እና መገልገያዎች">Portfolio & Utilities</div>
-                    <img src="project3.jpg" alt="Developer Portfolio">
+                    <div class="cover-badge" data-en="Productivity App" data-am="የምርታማነት መተግበሪያ">Productivity App</div>
+                    <img src="project3.jpg" alt="To-Do List App">
                 </div>
                 <div class="project-info">
-                    <h3 data-en="Personal Portfolio & Profile README" data-am="የግል ፖርትፎሊዮ እና የፕሮፋይል ሪአድሚ">Personal Portfolio & Profile README</h3>
-                    <p data-en="A responsive, dual-theme developer portfolio website featuring dynamic language switching (English & Amharic), fluid blob background animations, smooth navigation, and a customized GitHub profile layout." data-am="ምላሽ ሰጪ፣ ባለ ሁለት ገጽታ (Dual-theme) የዴቨሎፐር ፖርትፎሊዮ ድር ጣቢያ።">A responsive, dual-theme developer portfolio website featuring dynamic language switching (English & Amharic), fluid blob background animations, smooth navigation, and a customized GitHub profile layout.</p>
-                    <div class="tech-stack">Tech Stack: HTML5, CSS3, JavaScript</div>
+                    <h3 data-en="To-Do List App" data-am="የተግባራት ዝርዝር መተግበሪያ">To-Do List App</h3>
+                    <p data-en="A clean, aesthetic to-do list application for organizing daily tasks, setting top priorities, and jotting quick notes, with a simple and calming user interface." data-am="ዕለታዊ ተግባራትን ለማደራጀት፣ ቅድሚያ የሚሰጣቸውን ነገሮች ለማዘጋጀት እና ማስታወሻዎችን በፍጥነት ለመያዝ የተሰራ ውብ የተግባራት ዝርዝር መተግበሪያ።">A clean, aesthetic to-do list application for organizing daily tasks, setting top priorities, and jotting quick notes, with a simple and calming user interface.</p>
+                    <div class="tech-stack">Tech Stack: React, JavaScript, CSS3</div>
+                    <a href="https://github.com/zepora-dan" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-en="View on GitHub" data-am="በጊትሃብ ይመልከቱ">View on GitHub &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card">
+                <div class="project-img-box">
+                    <div class="cover-badge" data-en="Fintech App" data-am="የፋይናንስ ቴክኖሎጂ መተግበሪያ">Fintech App</div>
+                    <img src="project4.jpg" alt="FinFlow App">
+                </div>
+                <div class="project-info">
+                    <h3 data-en="FinFlow" data-am="ፊንፍሎው">FinFlow</h3>
+                    <p data-en="A money transfer and personal finance app that lets users send funds, track balances, and manage transactions across accounts through a fast, secure interface." data-am="ተጠቃሚዎች ገንዘብ እንዲልኩ፣ ቀሪ ሂሳብን እንዲከታተሉ እና በሂሳቦች መካከል ግብይቶችን እንዲያስተዳድሩ የሚያስችል የገንዘብ ዝውውር መተግበሪያ።">A money transfer and personal finance app that lets users send funds, track balances, and manage transactions across accounts through a fast, secure interface.</p>
+                    <div class="tech-stack">Tech Stack: React, Node.js, Express, PostgreSQL</div>
                     <a href="https://github.com/zepora-dan" target="_blank" class="btn" style="padding: 0.5rem 1rem; font-size: 0.85rem;" data-en="View on GitHub" data-am="በጊትሃብ ይመልከቱ">View on GitHub &rarr;</a>
                 </div>
             </div>
@@ -996,28 +1025,28 @@
         let charIndex = 0;
         const simulatorElem = document.getElementById('aiSimulator');
 
-        `function typeMessage() {`
-            `if (msgIndex < aiMessages.length) {`
-                `if (charIndex < aiMessages[msgIndex].length) {`
-                    `simulatorElem.textContent += aiMessages[msgIndex].charAt(charIndex);`
-                    `charIndex++;`
-                    `setTimeout(typeMessage, 40);`
-                `} else {`
-                    `setTimeout(() => {`
-                        `msgIndex++;`
-                        `charIndex = 0;`
-                        `if (msgIndex < aiMessages.length) {`
-                            `simulatorElem.textContent = "> ";`
-                            `typeMessage();`
-                        `} else {`
-                            `msgIndex = 0;`
-                            `simulatorElem.textContent = "> ";`
-                            `typeMessage();`
-                        `}`
-                    `}, 2000);`
-                `}`
-            `}`
-        `}`
+        function typeMessage() {
+            if (msgIndex < aiMessages.length) {
+                if (charIndex < aiMessages[msgIndex].length) {
+                    simulatorElem.textContent += aiMessages[msgIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeMessage, 40);
+                } else {
+                    setTimeout(() => {
+                        msgIndex++;
+                        charIndex = 0;
+                        if (msgIndex < aiMessages.length) {
+                            simulatorElem.textContent = "> ";
+                            typeMessage();
+                        } else {
+                            msgIndex = 0;
+                            simulatorElem.textContent = "> ";
+                            typeMessage();
+                        }
+                    }, 2000);
+                }
+            }
+        }
 
         window.addEventListener('DOMContentLoaded', () => {
             simulatorElem.textContent = "> ";
