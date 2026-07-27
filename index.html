@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deborah Daniel | Software Engineering Student & Full-Stack Developer</title>
-    <!-- Devicon for technology logos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <style>
         :root {
@@ -139,7 +138,6 @@
             gap: 1rem;
         }
 
-        /* Language Selector Styling */
         .lang-select {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -448,33 +446,9 @@
         }
 
         /* Projects Section */
-        .project-filters {
-            display: flex;
-            justify-content: center;
-            gap: 0.8rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            color: var(--secondary-text);
-            padding: 0.6rem 1.4rem;
-            border-radius: 30px;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .filter-btn.active, .filter-btn:hover {
-            background: var(--primary);
-            color: #121212;
-            border-color: var(--primary);
-        }
-
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -496,7 +470,7 @@
         }
 
         .project-img-box {
-            height: 200px;
+            height: 180px;
             overflow: hidden;
             background: var(--border-color);
             position: relative;
@@ -528,7 +502,7 @@
         }
 
         .project-info {
-            padding: 2rem;
+            padding: 1.8rem;
             display: flex;
             flex-direction: column;
             flex: 1;
@@ -536,7 +510,7 @@
 
         .project-info h3 {
             margin-bottom: 0.6rem;
-            font-size: 1.3rem;
+            font-size: 1.25rem;
         }
 
         .project-info p {
@@ -635,7 +609,6 @@
             color: var(--primary);
         }
 
-        /* Back to top button */
         #topBtn {
             position: fixed;
             bottom: 25px;
@@ -681,7 +654,7 @@
 </head>
 <body>
 
-    <!-- Moving Animated Background Elements -->
+    <!-- Moving Animated Background -->
     <div class="moving-bg">
         <div class="moving-blob blob-1"></div>
         <div class="moving-blob blob-2"></div>
@@ -699,7 +672,6 @@
             <li><a href="#contact" data-en="Contact" data-am="አግኙኝ">Contact</a></li>
         </ul>
         <div class="nav-controls">
-            <!-- Language Selector Dropdown -->
             <select class="lang-select" id="langSelect" onchange="switchLanguage(this.value)">
                 <option value="en">English</option>
                 <option value="am">አማርኛ</option>
@@ -713,15 +685,15 @@
         <div class="hero-content">
             <h1><span data-en="Hi, I'm" data-am="ሰላም፣ እኔ">Hi, I'm</span> <span style="color:var(--primary);">Deborah Daniel</span> 👋</h1>
             <h2 data-en="Software Engineering Student | Full-Stack Developer" data-am="የ ሶፍትዌር ኢንጂነሪንግ ተማሪ | ፉል-ስታክ ዴቨሎፐር">Software Engineering Student | Full-Stack Developer</h2>
-            <p data-en="I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions." data-am="ተጠቃሚዎች ሊጠቀሙባቸው የሚችሉ ዘመናዊ የድር መተግበሪያዎችን በመገንባት ላይ ያለኩ ስሜታዊ ዴቨሎፐር ነኝ።">I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions.</p>
+            <p data-en="I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions, featuring dedicated literary repositories and utility systems." data-am="ተጠቃሚዎች ሊጠቀሙባቸው የሚችሉ ዘመናዊ የድር መተግበሪያዎችን በመገንባት ላይ ያለኩ ስሜታዊ ዴቨሎፐር ነኝ።">I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions, featuring dedicated literary repositories and utility systems.</p>
             <div class="hero-buttons">
                 <a href="#projects" class="btn"><span data-en="View Projects" data-am="ፕሮጀክቶችን ይመልከቱ">View Projects</span> &rarr;</a>
-                <a href="#contact" class="btn btn-outline" data-en="Contact Me" data-am="አግኙኝ">Contact Me</a>
+                <a href="#contact" class="btn btn-outline" data-en="Get in Touch" data-am="ያግኙን">Get in Touch</a>
             </div>
         </div>
         <div class="hero-image-container">
             <div class="hero-blob-frame">
-                <img src="image_db677d.jpg" alt="Deborah Daniel">
+                <img src="photo_2026-07-27_05-03-19.jpg" alt="Deborah Daniel">
             </div>
         </div>
     </header>
@@ -730,7 +702,7 @@
     <section id="about">
         <div class="about-grid">
             <div class="about-single-image">
-                <img src="image_db677d.jpg" alt="Deborah Daniel Portrait">
+                <img src="photo_2026-07-27_05-03-19.jpg" alt="Deborah Daniel Portrait">
             </div>
             <div class="about-text-content">
                 <h2 class="section-title" style="text-align: left;" data-en="About Me" data-am="ስለ እኔ">About Me</h2>
@@ -747,7 +719,6 @@
         <p class="section-subtitle" data-en="Technologies and tools I work with, represented with dynamic skill levels" data-am="የምጠቀምባቸው ቴክኖሎጂዎች እና የክህሎት ደረጃቸው">Technologies and tools I work with, represented with dynamic skill levels</p>
         
         <div class="skills-container">
-            <!-- HTML -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -757,11 +728,10 @@
                     <span class="skill-percentage">90%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="90%"></div>
+                    <div class="progress-line-fill" style="width: 90%;"></div>
                 </div>
             </div>
 
-            <!-- CSS -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -771,11 +741,10 @@
                     <span class="skill-percentage">85%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="85%"></div>
+                    <div class="progress-line-fill" style="width: 85%;"></div>
                 </div>
             </div>
 
-            <!-- JavaScript -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -785,11 +754,10 @@
                     <span class="skill-percentage">80%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="80%"></div>
+                    <div class="progress-line-fill" style="width: 80%;"></div>
                 </div>
             </div>
 
-            <!-- React -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -799,11 +767,10 @@
                     <span class="skill-percentage">75%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="75%"></div>
+                    <div class="progress-line-fill" style="width: 75%;"></div>
                 </div>
             </div>
 
-            <!-- Node.js & Express -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -813,11 +780,10 @@
                     <span class="skill-percentage">75%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="75%"></div>
+                    <div class="progress-line-fill" style="width: 75%;"></div>
                 </div>
             </div>
 
-            <!-- PostgreSQL -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
@@ -827,81 +793,91 @@
                     <span class="skill-percentage">70%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="70%"></div>
+                    <div class="progress-line-fill" style="width: 70%;"></div>
                 </div>
             </div>
 
-            <!-- C++ -->
             <div class="skill-bar-card">
                 <div class="skill-info">
                     <div class="skill-name-area">
                         <i class="devicon-cplusplus-plain colored"></i>
-                        <span>C++ (High-Performance Finance Tracking)</span>
+                        <span>C++ (High-Performance Systems)</span>
                     </div>
                     <span class="skill-percentage">80%</span>
                 </div>
                 <div class="progress-line-bg">
-                    <div class="progress-line-fill" data-width="80%"></div>
+                    <div class="progress-line-fill" style="width: 80%;"></div>
                 </div>
             </div>
         </div>
 
-        <!-- AI Assistant Integration Box -->
         <div class="ai-feature-box">
             <h3 data-en="🤖 Integrated AI Assistant Feature" data-am="🤖 የተቀናጀ አርቴፊሻል ኢንተለጀንት (AI) ረዳት">🤖 Integrated AI Assistant Feature</h3>
             <p data-en="Interactive chatbot module built to answer queries, help users search content, and offer dynamic assistance across the platform." data-am="ተጠቃሚዎች ጥያቄዎችን እንዲጠይቁ እና መረጃዎችን በፍጥነት እንዲያገኙ የሚያስችል ዘመናዊ የ AI ረዳት ስርዓት።">Interactive chatbot module built to answer queries, help users search content, and offer dynamic assistance across the platform.</p>
-            <div class="ai-chat-simulator" id="aiSimulatorText">
+            <div class="ai-chat-simulator">
                 > AI Assistant initialized: Ready to assist users with navigation and queries...
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section (All built by you) -->
     <section id="projects">
         <h2 class="section-title" data-en="Projects" data-am="ፕሮጀክቶች">Projects</h2>
-        <p class="section-subtitle" data-en="A showcase of my recent applications with dedicated literature and historical records" data-am="የቅርብ ጊዜ ፕሮጀክቶቼ ዝርዝር (ታሪካዊ እና ዘመናዊ የጽሑፍ ስራዎችን ጨምሮ)">A showcase of my recent applications with dedicated literature and historical records</p>
-        <div class="project-filters">
-            <button class="filter-btn active" onclick="filterProjects('all', event)" data-en="All Projects" data-am="ሁሉም ፕሮጀክቶች">All Projects</button>
-            <button class="filter-btn" onclick="filterProjects('fullstack', event)" data-en="Full-Stack & Systems" data-am="ፉል-ስታክ እና ሲስተምስ">Full-Stack & Systems</button>
-            <button class="filter-btn" onclick="filterProjects('frontend', event)" data-en="Frontend" data-am="ፍሮን-ኤንድ">Frontend</button>
-        </div>
+        <p class="section-subtitle" data-en="A showcase of my recent web applications and development projects" data-am="የገነባኋቸው የቅርብ ጊዜ የድር መተግበሪያዎች እና ፕሮጀክቶች">A showcase of my recent web applications and development projects</p>
+        
         <div class="projects-grid">
-            <!-- Project 1: Digital Library -->
-            <div class="project-card" data-category="fullstack">
+            <!-- Project 1 -->
+            <div class="project-card">
                 <div class="project-img-box">
-                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
-                    <img src="image_db677d.jpg" alt="Digital Library Website Cover">
+                    <div class="cover-badge" data-en="Featured Project" data-am="ዋና ፕሮጀክት">Featured Project</div>
+                    <img src="photo_2026-07-27_05-03-19.jpg" alt="Todo List App Cover">
                 </div>
                 <div class="project-info">
-                    <h3 data-en="Digital Library Website (Amharic & English Legends)" data-am="የዲጂታል ቤተ መጻሕፍት ድር ጣቢያ (ታሪካዊ እና ዘመናዊ ስራዎች)">Digital Library Website (Amharic & English Legends)</h3>
-                    <p data-en="An interactive repository featuring complete literary genres, hosting historical and recent Amharic and English books, articles, journals, and legendary publications with built-in PDF rendering." data-am="በአማርኛ እና በእንግሊዝኛ የተጻፉ የታሪክ ባለጸጋ መጻሕፍትን፣ ጆርናሎችን እና ድንቅ ጽሑፎችን የያዘ ዲጂታል ቤተ መጻሕፍት መተግበሪያ።">An interactive repository featuring complete literary genres, hosting historical and recent Amharic and English books, articles, journals, and legendary publications with built-in PDF rendering.</p>
-                    <div class="tech-stack">React • Node.js • Express • PostgreSQL • PDF.js</div>
-                    <a href="https://github.com/zepora-dan/Digital-library-website" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                    <h3 data-en="Todo List Application" data-am="የተግባር ማስተካከያ መተግበሪያ">Todo List Application</h3>
+                    <p data-en="An efficient productivity app designed independently to organize daily tasks, prioritize workloads, and track completion status seamlessly." data-am="የዕለት ተዕለት ስራዎችን በግል ለማደራጀት የሚያስችል መተግበሪያ።">An efficient productivity app designed independently to organize daily tasks, prioritize workloads, and track completion status seamlessly.</p>
+                    <div class="tech-stack">HTML • CSS • JavaScript</div>
+                    <a href="https://github.com/zepora-dan" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
                 </div>
             </div>
-            <!-- Project 2: FinFlow App -->
-            <div class="project-card" data-category="fullstack">
+
+            <!-- Project 2 -->
+            <div class="project-card">
                 <div class="project-img-box">
-                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
-                    <img src="image_db677d.jpg" alt="FinFlow Application Cover">
+                    <div class="cover-badge" data-en="Featured Project" data-am="ዋና ፕሮጀክት">Featured Project</div>
+                    <img src="photo_2026-07-27_05-03-19.jpg" alt="Language Practicing Bot Cover">
+                </div>
+                <div class="project-info">
+                    <h3 data-en="Language Practicing Bot" data-am="የቋንቋ ልምምድ ቦት">Language Practicing Bot</h3>
+                    <p data-en="An interactive conversational interface engineered individually to support all international languages, providing user assistance through text and voice." data-am="ሁሉም ዓለም አቀፍ ቋንቋዎችን የሚደግፍ እና በግል የተገነባ መስተጋብራዊ ቦት።">An interactive conversational interface engineered individually to support all international languages, providing user assistance through text and voice.</p>
+                    <div class="tech-stack">JavaScript • HTML • CSS • Web Speech</div>
+                    <a href="https://github.com/zepora-dan" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card">
+                <div class="project-img-box">
+                    <div class="cover-badge" data-en="Featured Project" data-am="ዋና ፕሮጀክት">Featured Project</div>
+                    <img src="photo_2026-07-27_05-03-19.jpg" alt="FinFlow Application Cover">
                 </div>
                 <div class="project-info">
                     <h3 data-en="FinFlow Application" data-am="ፊንፍሎው መተግበሪያ">FinFlow Application</h3>
-                    <p data-en="A robust financial management application engineered to track transactional cash flows, monitor budgets, and deliver comprehensive analytical insights." data-am="የገንዘብ ዝውውርን፣ በጀትን እና የፋይናንስ ሪፖርቶችን ለመቆጣጠር የሚያስችል ዘመናዊ መተግበሪያ።">A robust financial management application engineered to track transactional cash flows, monitor budgets, and deliver comprehensive analytical insights.</p>
+                    <p data-en="A robust financial management application developed to track transactional cash flows, monitor budgets, and deliver analytics." data-am="የገንዘብ ዝውውርን እና በጀትን ለመቆጣጠር የሚያስችል ዘመናዊ መተግበሪያ።">A robust financial management application developed to track transactional cash flows, monitor budgets, and deliver analytics.</p>
                     <div class="tech-stack">React • Node.js • Express • PostgreSQL</div>
-                    <a href="https://github.com/zepora-dan/FinFlow" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                    <a href="https://github.com/zepora-dan" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
                 </div>
             </div>
-            <!-- Project 3: Finance Tracking System -->
-            <div class="project-card" data-category="fullstack">
+
+            <!-- Project 4 -->
+            <div class="project-card">
                 <div class="project-img-box">
-                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
-                    <img src="image_db677d.jpg" alt="Finance Tracking System Cover">
+                    <div class="cover-badge" data-en="Featured Project" data-am="ዋና ፕሮጀክት">Featured Project</div>
+                    <img src="photo_2026-07-27_05-03-19.jpg" alt="Digital Library Website Cover">
                 </div>
                 <div class="project-info">
-                    <h3 data-en="High-Performance Finance Tracker" data-am="ከፍተኛ ፍጥነት ያለው የፋይናንስ መከታተያ">High-Performance Finance Tracker</h3>
-                    <p data-en="A high-efficiency command-line and desktop financial tracking mechanism optimized using C++ for rapid data processing and secure ledger storage." data-am="በ C++ የተገነባ ከፍተኛ ፍጥነት እና ደህንነት ያለው የፋይናንስ መዝገብ መቆጣጠሪያ ስርዓት።">A high-efficiency command-line and desktop financial tracking mechanism optimized using C++ for rapid data processing and secure ledger storage.</p>
-                    <div class="tech-stack">C++ • Data Structures • File I/O</div>
+                    <h3 data-en="Digital Library (Amharic & English)" data-am="የዲጂታል ቤተ መጻሕፍት ድር ጣቢያ">Digital Library (Amharic & English)</h3>
+                    <p data-en="An interactive repository hosting historical and recent Amharic and English books, articles, journals, and PDF rendering." data-am="የታሪክ መጻሕፍት እና ጆርናሎችን የያዘ ዲጂታል ቤተ መጻሕፍት።">An interactive repository hosting historical and recent Amharic and English books, articles, journals, and PDF rendering.</p>
+                    <div class="tech-stack">React • Node.js • Express • PostgreSQL</div>
                     <a href="https://github.com/zepora-dan" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
                 </div>
             </div>
@@ -911,33 +887,27 @@
     <!-- Education Section -->
     <section id="education">
         <h2 class="section-title" data-en="Education" data-am="ትምህርት">Education</h2>
-        <p class="section-subtitle" data-en="Academic background and qualifications" data-am="የተማርኩባቸው ተቋማት እና የትምህርት ደረጃ">Academic background and qualifications</p>
+        <p class="section-subtitle" data-en="My academic background, institutional studies, and qualifications" data-am="የአካዳሚክ ዳራ እና ተቋማዊ ትምህርት">My academic background, institutional studies, and qualifications</p>
         <div class="timeline">
             <div class="timeline-item">
-                <h3 data-en="BSc in Software Engineering" data-am="የሶፍትዌር ኢንጂነሪንግ ባችለር ዲግሪ">BSc in Software Engineering</h3>
-                <span data-en="Dire Dawa University | Expected Graduation" data-am="ድሬዳዋ ዩኒቨርሲቲ">Dire Dawa University | Expected Graduation</span>
-                <p data-en="Focusing on core software architecture, data structures, algorithm design, full-stack web applications, and database engineering." data-am="በሶፍትዌር አርክቴክቸር፣ በአልጎሪዝም ዲዛይን እና በድር መተግበሪያዎች ልማት ላይ በማተኮር ላይ ትገኛለች።"></p>
-                <p style="margin-top: 1rem; font-style: italic; color: var(--text-color);" data-en="My academic journey at Dire Dawa University has been an inspiring crucible of discovery, transforming complex theoretical paradigms into tangible, real-world technological solutions. Through intensive collaboration, rigorous analytical study, and an unwavering commitment to writing clean, maintainable code, I continue to expand my engineering capabilities to design impactful systems that solve modern challenges." data-am="በድሬዳዋ ዩኒቨርሲቲ የነበረኝ የትምህርት ጉዞ ውስብስብ ንድፈ ሃሳቦችን ወደ እውነተኛ የቴክኖሎጂ መፍትሄዎች በመቀየር ረገድ ትልቅ አስተዋጽኦ አድርጓል። የተሻለ እና ንጹህ ኮድ በመጻፍ ዘመናዊ ችግሮችን የሚፈቱ ስርዓቶችን ለመንደፍ ያለኝን አቅም በየጊዜው እያዳበርኩ እገኛለሁ።">My academic journey at Dire Dawa University has been an inspiring crucible of discovery, transforming complex theoretical paradigms into tangible, real-world technological solutions. Through intensive collaboration, rigorous analytical study, and an unwavering commitment to writing clean, maintainable code, I continue to expand my engineering capabilities to design impactful systems that solve modern challenges.</p>
+                <h3 data-en="Bachelor of Science in Software Engineering" data-am="በሶፍትዌር ኢንጂነሪንግ የባችለር ዲግሪ">Bachelor of Science in Software Engineering</h3>
+                <span>Dire Dawa University (2023 - Present)</span>
+                <p data-en="Focusing on core software development principles, data structures, algorithms, object-oriented programming, and full-stack web technologies." data-am="በሶፍትዌር ልማት መሰረታዊគោላፎች፣ ዳታ ስትራክቸር እና አልጎሪዝም ላይ በማተኮር ላይ ትገኛለች።">Focusing on core software development principles, data structures, algorithms, object-oriented programming, and full-stack web technologies.</p>
+                <p data-en="Engaged in rigorous academic coursework covering advanced computing concepts, software architecture design patterns, and collaborative team-based engineering projects to solve real-world problems." data-am="ዘመናዊ የኮምፒውቲንግ ጽንሰ-ሐሳቦችን፣ የሶፍትዌር አርክቴክቸር ዲዛይን እና ተግባራዊ የቡድን ፕሮጀክቶችን በማጥናት ላይ ትገኛለች።">Engaged in rigorous academic coursework covering advanced computing concepts, software architecture design patterns, and collaborative team-based engineering projects to solve real-world problems.</p>
             </div>
         </div>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
-        <h2 class="section-title" data-en="Experience & Leadership" data-am="ልምድ እና አመራር">Experience & Leadership</h2>
-        <p class="section-subtitle" data-en="Practical industry exposure, technical contributions, and collaborative teamwork" data-am="ተግባራዊ የሥራ ልምድ እና የቡድን ትብብር">Practical industry exposure, technical contributions, and collaborative teamwork</p>
+        <h2 class="section-title" data-en="Experience & Leadership" data-am="ልምድ እና መሪነት">Experience & Leadership</h2>
+        <p class="section-subtitle" data-en="Practical industry exposure, technical contributions, and collaborative teamwork" data-am="ተግባራዊ የስራ ልምድ እና የቴክኒክ አስተዋጽኦ">Practical industry exposure, technical contributions, and collaborative teamwork</p>
         <div class="timeline">
             <div class="timeline-item">
-                <h3 data-en="Full-Stack Web Development Lead & Student Developer" data-am="ፉል-ስታክ ዌብ ዴቨሎፕመንት ሊንክ እና የተማሪ ዴቨሎፐር">Full-Stack Web Development Lead & Student Developer</h3>
-                <span data-en="Academic & Independent Engineering Portfolios | 2025 - Present" data-am="የአካዳሚክ እና የግል ምህንድስና ስራዎች | 2025 - አሁን">Academic & Independent Engineering Portfolios | 2025 - Present</span>
-                <p data-en="Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components." data-am="የተሟላ የ ሶፍትዌር ልማት ሂደቶችን በመምራት፣ ጠንካራ ዳታቤዝ ዲዛይን እና ዘመናዊ የፍሮንት-ኤንድ መዋቅርዎችን ገንባለች።">Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components.</p>
-                <p style="margin-top: 0.8rem;" data-en="Engineered high-performance database tables in PostgreSQL, built secure backend routing with Node.js and Express, and seamlessly integrated interactive PDF document rendering utilities to support extensive literary archives." data-am="በ PostgreSQL ላይ ጠንካራ ዳታቤዝ በመገንባት፣ በ Node.js እና Express የተደገፈ የባክ-ኤንድ ራውቲንግ እና የሰነድ እይታ መተግበሪያዎችን አበልልታለች።">Engineered high-performance database tables in PostgreSQL, built secure backend routing with Node.js and Express, and seamlessly integrated interactive PDF document rendering utilities to support extensive literary archives.</p>
-            </div>
-            <div class="timeline-item">
-                <h3 data-en="Collaborative Software Engineering Contributor" data-am="የትብብር ሶፍትዌር ኢንጂነሪንግ አባል">Collaborative Software Engineering Contributor</h3>
-                <span data-en="University Tech Workshops & Peer Programming | 2024 - Present" data-am="የዩኒቨርሲቲ የቴክኖሎጂ ስልጠናዎች | 2024 - አሁን">University Tech Workshops & Peer Programming | 2024 - Present</span>
-                <p data-en="Engaged in peer code reviews, collaborative version control workflows using Git/GitHub, and systematic debugging sessions to resolve complex compilation and package integration errors." data-am="የ ኮድ ግምገማዎችን በማካሄድ፣ በ Git እና GitHub አማካኝነት የቡድን ስራዎችን በመስራት እና የቴክኒክ ችግሮችን በመፍታት ላይ ሰርታለች።">Engaged in peer code reviews, collaborative version control workflows using Git/GitHub, and systematic debugging sessions to resolve complex compilation and package integration errors.</p>
-                <p style="margin-top: 0.8rem;" data-en="Focused on applying object-oriented design patterns, writing modular and reusable code snippets, and maintaining high performance standards across both desktop and web applications." data-am="የኦብጀክት-ኦሪንቴድ ዲዛይን ቅጦችን በመጠቀም ንጹህ እና እንደገና ጥቅም ላይ ሊውሉ የሚችሉ ኮዶችን በመጻፍ ላይ ትኩረት አድርጋለች።">Focused on applying object-oriented design patterns, writing modular and reusable code snippets, and maintaining high performance standards across both desktop and web applications.</p>
+                <h3 data-en="Full-Stack Web Development Lead & Student Developer" data-am="ፉል-ስታክ ዴቨሎፐር እና ተማሪ ዴቨሎፐር">Full-Stack Web Development Lead & Student Developer</h3>
+                <span>Academic & Independent Engineering Portfolios | 2025 - Present</span>
+                <p data-en="Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components." data-am="ዘመናዊ ቴክኖሎጂዎችን በመጠቀም ዲጂታል ቤተ መጻሕፍትን እና የፋይናንስ መተግበሪያዎችን በመንደፍ ላይ ትገኛለች።">Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components.</p>
+                <p data-en="Successfully designed and implemented custom web-based utility systems, interactive language bots supporting global communication, and database-driven literature repositories incorporating multilingual literary assets." data-am="ለተጠቃሚዎች ምቹ የሆኑ የድር መተግበሪያዎችን፣ የቋንቋ ልምምድ ቦቶችን እና የባለብዙ ቋንቋ ዲጂታል ቤተ መጻሕፍት ማከማቻዎችን በብቃት ገንብታለች።">Successfully designed and implemented custom web-based utility systems, interactive language bots supporting global communication, and database-driven literature repositories incorporating multilingual literary assets.</p>
             </div>
         </div>
     </section>
@@ -945,41 +915,31 @@
     <!-- Contact Section -->
     <section id="contact">
         <h2 class="section-title" data-en="Get In Touch" data-am="ያግኙኝ">Get In Touch</h2>
-        <p class="section-subtitle" data-en="Have a project in mind or want to collaborate? Let's connect!" data-am="ጥያቄ አለዎት ወይስ አብረውን መስራት ይፈልጉ ይሆን? ያግኙን!"></p>
+        <p class="section-subtitle" data-en="Have a project in mind or want to collaborate? Feel free to reach out!" data-am="ሓሳብ አለዎት ወይስ አብሮ መስራት ይፈልጋሉ? ያግኙኝ!">Have a project in mind or want to collaborate? Feel free to reach out!</p>
         <div class="contact-container">
-            <p data-en="I am always open to discussing new software development opportunities, web engineering projects, or tech collaborations." data-am="አዳዲስ የሶፍትዌር ልማት ስራዎችን እና የትብብር ጥያቄዎችን ለመቀበል ዝግጁ ነኝ።"></p>
+            <p data-en="I am always open to discussing new software engineering opportunities, web development projects, or tech collaborations." data-am="ለአዲስ የሶፍትዌር ኢንጂነሪንግ ስራዎች እና ትብብሮች ሁልጊዜ ዝግጁ ነኝ።">I am always open to discussing new software engineering opportunities, web development projects, or tech collaborations.</p>
             <div class="contact-links">
-                <a href="mailto:deborah@example.com" class="btn" data-en="Email Me" data-am="ኢሜይል ይላኩ">Email Me</a>
-                <a href="https://github.com/zepora-dan" target="_blank" class="btn btn-outline" data-en="GitHub Profile" data-am="ጊትሃብ ገጽ">GitHub Profile</a>
+                <a href="mailto:deborahdaniels321@gmail.com" class="btn">📧 Email Me</a>
+                <a href="https://github.com/zepora-dan" target="_blank" class="btn btn-outline">🐙 GitHub Profile</a>
+                <a href="https://www.linkedin.com/in/deborah-daniel-096a3a349/" target="_blank" class="btn btn-outline">💼 LinkedIn Profile</a>
+                <a href="https://t.me/zepora_dan" target="_blank" class="btn btn-outline">💬 Telegram</a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p data-en="© 2026 Deborah Daniel. Built with passion and code." data-am="© 2026 ደቦራ ዳንኤል. ሁሉም መብቶች የተጠበቁ ናቸው።">&copy; 2026 Deborah Daniel. Built with passion and code.</p>
+        <p>&copy; 2026 Deborah Daniel. All rights reserved.</p>
         <div class="social-footer">
-            <a href="https://github.com/zepora-dan" target="_blank" data-en="GitHub" data-am="ጊትሃብ">GitHub</a>
+            <a href="#about" data-en="Home" data-am="መነሻ">Home</a>
+            <a href="#projects" data-en="Projects" data-am="ፕሮጀክቶች">Projects</a>
             <a href="#contact" data-en="Contact" data-am="አግኙኝ">Contact</a>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <button onclick="topFunction()" id="topBtn" title="Go to top">&uarr;</button>
+    <button onclick="topFunction()" id="topBtn" title="Go to top">↑</button>
 
-    <!-- JavaScript for Interactivity, Translations, and Theme Toggle -->
     <script>
-        // Animate progress bars on load
-        window.addEventListener('DOMContentLoaded', () => {
-            setTimeout(() => {
-                const fills = document.querySelectorAll('.progress-line-fill');
-                fills.forEach(fill => {
-                    fill.style.width = fill.getAttribute('data-width');
-                });
-            }, 300);
-        });
-
-        // Theme Toggle Logic
         function toggleTheme() {
             const html = document.documentElement;
             const btn = document.getElementById('themeToggleBtn');
@@ -992,37 +952,24 @@
             }
         }
 
-        // Language Switcher Logic
         function switchLanguage(lang) {
             const elements = document.querySelectorAll('[data-en]');
             elements.forEach(el => {
-                if (lang === 'am' && el.getAttribute('data-am')) {
-                    el.textContent = el.getAttribute('data-am');
-                } else if (lang === 'en' && el.getAttribute('data-en')) {
-                    el.textContent = el.getAttribute('data-en');
-                }
-            });
-            document.documentElement.lang = lang;
-        }
-
-        // Project Filtering Logic
-        function filterProjects(category, event) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            const cards = document.querySelectorAll('.project-card');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
+                const translation = el.getAttribute(`data-${lang}`);
+                if (translation) {
+                    if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                        el.placeholder = translation;
+                    } else {
+                        el.textContent = translation;
+                    }
                 }
             });
         }
 
-        // Back to top button logic
-        window.onscroll = function() {scrollFunction()};
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
         function scrollFunction() {
             const topBtn = document.getElementById("topBtn");
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
@@ -1031,6 +978,7 @@
                 topBtn.style.display = "none";
             }
         }
+
         function topFunction() {
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
