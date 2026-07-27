@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deborah Daniel | Software Engineering Student & Full-Stack Developer</title>
+    <!-- Devicon for technology logos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-color: #E0E0E0;
+            --card-bg: #1E1E1E;
+            --primary: #FF7B00;
+            --primary-hover: #E56E00;
+            --secondary-text: #B0B0B0;
+            --border-color: #2D2D2D;
+            --nav-bg: rgba(18, 18, 18, 0.90);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+        }
+
+        [data-theme="light"] {
+            --bg-color: #F4F4F5;
+            --text-color: #121212;
+            --card-bg: #FFFFFF;
+            --primary: #FF7B00;
+            --primary-hover: #D96900;
+            --secondary-text: #595959;
+            --border-color: #D1D1D6;
+            --nav-bg: rgba(244, 244, 245, 0.90);
+            --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Moving Animated Background */
+        .moving-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+            background: var(--bg-color);
+        }
+
+        .moving-blob {
+            position: absolute;
+            filter: blur(120px);
+            opacity: 0.20;
+            border-radius: 50%;
+            animation: moveAnimation 15s infinite alternate ease-in-out;
+        }
+
+        .blob-1 {
+            width: 450px;
+            height: 450px;
+            background: #FF7B00;
+            top: -100px;
+            left: -100px;
+        }
+
+        .blob-2 {
+            width: 550px;
+            height: 550px;
+            background: #333333;
+            bottom: -150px;
+            right: -150px;
+            animation-delay: -5s;
+        }
+
+        @keyframes moveAnimation {
+            0% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(120px, 150px) scale(1.1); }
+            100% { transform: translate(-60px, 90px) scale(0.9); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 8%;
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+        }
+
+        .nav-logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .nav-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Language Selector Styling */
+        .lang-select {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .lang-select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.1rem;
+        }
+
+        .theme-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        header.hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 8rem 8% 4rem 8%;
+            gap: 4rem;
+        }
+
+        .hero-content {
+            flex: 1;
+            max-width: 600px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hero-content h1 {
+            font-size: 3.8rem;
+            margin-bottom: 0.8rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
+
+        .hero-content h1 span {
+            color: var(--primary);
+        }
+
+        .hero-content h2 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .hero-content p {
+            color: var(--secondary-text);
+            margin-bottom: 2.2rem;
+            font-size: 1.1rem;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .hero-image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: floatImage 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatImage {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-15px); }
+        }
+
+        .hero-blob-frame {
+            width: 380px;
+            height: 380px;
+            background: linear-gradient(135deg, #1E1E1E, #2D2D2D);
+            border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            position: relative;
+            border: 2px solid var(--border-color);
+            animation: morphBlob 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes morphBlob {
+            0% { border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%; }
+            50% { border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%; }
+            100% { border-radius: 50% 50% 50% 50% / 60% 40% 50% 50%; }
+        }
+
+        .hero-blob-frame img {
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 110%;
+            height: 110%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: #121212;
+            padding: 0.8rem 1.8rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-hover);
+            color: #FFFFFF;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--border-color);
+            color: var(--text-color);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            background-color: rgba(255, 123, 0, 0.1);
+            color: var(--primary);
+        }
+
+        /* General Sections */
+        section {
+            padding: 6rem 8% 4rem 8%;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        section h2.section-title {
+            font-size: 2.2rem;
+            margin-bottom: 0.8rem;
+            text-align: center;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--secondary-text);
+            margin-bottom: 3rem;
+            font-size: 1rem;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-single-image {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            overflow: hidden;
+            height: 380px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+
+        .about-single-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .about-text-content p {
+            color: var(--secondary-text);
+            font-size: 1.05rem;
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        /* Skills Section */
+        .skills-container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .skill-bar-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+
+        .skill-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .skill-name-area {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+        }
+
+        .skill-name-area i {
+            font-size: 1.8rem;
+        }
+
+        .skill-percentage {
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-line-bg {
+            width: 100%;
+            height: 10px;
+            background: var(--border-color);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .progress-line-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, var(--primary), #FFA500);
+            border-radius: 5px;
+            transition: width 1.5s ease-in-out;
+        }
+
+        /* AI Feature Section */
+        .ai-feature-box {
+            max-width: 900px;
+            margin: 2rem auto 0 auto;
+            background: linear-gradient(135deg, rgba(45, 45, 45, 0.5), rgba(30, 30, 30, 0.9));
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .ai-feature-box h3 {
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.3rem;
+        }
+
+        .ai-feature-box p {
+            color: var(--secondary-text);
+            margin-bottom: 1.2rem;
+        }
+
+        .ai-chat-simulator {
+            background: var(--bg-color);
+            border: 1px solid var(--border-color);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: left;
+            font-family: monospace;
+            color: var(--primary);
+            font-size: 0.95rem;
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Projects Section */
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 0.8rem;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            color: var(--secondary-text);
+            padding: 0.6rem 1.4rem;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--primary);
+            color: #121212;
+            border-color: var(--primary);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--primary);
+        }
+
+        .project-img-box {
+            height: 200px;
+            overflow: hidden;
+            background: var(--border-color);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        .cover-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(18, 18, 18, 0.85);
+            color: var(--primary);
+            padding: 0.3rem 0.8rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            backdrop-filter: blur(4px);
+            z-index: 2;
+        }
+
+        .project-info {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .project-info h3 {
+            margin-bottom: 0.6rem;
+            font-size: 1.3rem;
+        }
+
+        .project-info p {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+            flex: 1;
+            line-height: 1.6;
+        }
+
+        .tech-stack {
+            font-size: 0.85rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        /* Timeline / Education / Experience */
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 14px;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item h3 {
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .timeline-item span {
+            font-size: 0.85rem;
+            color: var(--primary);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-item p {
+            color: var(--secondary-text);
+            font-size: 0.95rem;
+            margin-bottom: 0.8rem;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 650px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-container p {
+            color: var(--secondary-text);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2.5rem;
+            color: var(--secondary-text);
+            font-size: 0.9rem;
+            background: var(--card-bg);
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer .social-footer {
+            margin-top: 0.8rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        footer .social-footer a {
+            color: var(--secondary-text);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        footer .social-footer a:hover {
+            color: var(--primary);
+        }
+
+        /* Back to top button */
+        #topBtn {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            display: none;
+            background: var(--primary);
+            color: #121212;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: var(--shadow);
+            z-index: 100;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        #topBtn:hover {
+            background-color: var(--primary-hover);
+            color: #FFFFFF;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media(max-width: 900px) {
+            header.hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding-top: 7rem;
+            }
+            .hero-buttons {
+                justify-content: center;
+            }
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Moving Animated Background Elements -->
+    <div class="moving-bg">
+        <div class="moving-blob blob-1"></div>
+        <div class="moving-blob blob-2"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-logo" data-en="Deborah Daniel" data-am="ደቦራ ዳንኤል">Deborah Daniel</div>
+        <ul class="nav-links">
+            <li><a href="#about" data-en="About" data-am="ስለ እኔ">About</a></li>
+            <li><a href="#skills" data-en="Skills" data-am="ችሎታዎች">Skills</a></li>
+            <li><a href="#projects" data-en="Projects" data-am="ፕሮጀክቶች">Projects</a></li>
+            <li><a href="#education" data-en="Education" data-am="ትምህርት">Education</a></li>
+            <li><a href="#experience" data-en="Experience" data-am="ልምድ">Experience</a></li>
+            <li><a href="#contact" data-en="Contact" data-am="አግኙኝ">Contact</a></li>
+        </ul>
+        <div class="nav-controls">
+            <!-- Language Selector Dropdown -->
+            <select class="lang-select" id="langSelect" onchange="switchLanguage(this.value)">
+                <option value="en">English</option>
+                <option value="am">አማርኛ</option>
+            </select>
+            <button class="theme-toggle" onclick="toggleTheme()" id="themeToggleBtn" aria-label="Toggle Theme">🌙</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1><span data-en="Hi, I'm" data-am="ሰላም፣ እኔ">Hi, I'm</span> <span style="color:var(--primary);">Deborah Daniel</span> 👋</h1>
+            <h2 data-en="Software Engineering Student | Full-Stack Developer" data-am="የ ሶፍትዌር ኢንጂነሪንግ ተማሪ | ፉል-ስታክ ዴቨሎፐር">Software Engineering Student | Full-Stack Developer</h2>
+            <p data-en="I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions." data-am="ተጠቃሚዎች ሊጠቀሙባቸው የሚችሉ ዘመናዊ የድር መተግበሪያዎችን በመገንባት ላይ ያለኩ ስሜታዊ ዴቨሎፐር ነኝ።">I am a passionate developer focused on building responsive, user-friendly web applications and bridging creative frontend design with robust backend solutions.</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn"><span data-en="View Projects" data-am="ፕሮጀክቶችን ይመልከቱ">View Projects</span> &rarr;</a>
+                <a href="#contact" class="btn btn-outline" data-en="Contact Me" data-am="አግኙኝ">Contact Me</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-blob-frame">
+                <img src="image_db677d.jpg" alt="Deborah Daniel">
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-single-image">
+                <img src="image_db677d.jpg" alt="Deborah Daniel Portrait">
+            </div>
+            <div class="about-text-content">
+                <h2 class="section-title" style="text-align: left;" data-en="About Me" data-am="ስለ እኔ">About Me</h2>
+                <p data-en="I am a passionate Software Engineering student at Dire Dawa University with a strong interest in frontend and full-stack web development. I enjoy building responsive, user-friendly web applications and continuously improving my programming and problem-solving skills." data-am="በድሬዳዋ ዩኒቨርሲቲ የሶፍትዌር ኢንጂነሪንግ ተማሪ ስሆን፣ የድር መተግበሪያዎችን በመንደፍ እና በመገንባት ላይ ከፍተኛ ፍላጎት አለኝ።">I am a passionate Software Engineering student at Dire Dawa University with a strong interest in frontend and full-stack web development. I enjoy building responsive, user-friendly web applications and continuously improving my programming and problem-solving skills.</p>
+                <p data-en="Through personal projects and continuous learning, I am gaining practical experience with modern web technologies while working toward becoming a skilled software developer, aiming to contribute to meaningful projects that make a positive impact." data-am="በግል ፕሮጀክቶች እና በቀጣይ ትምህርት ዘመናዊ ቴክኖሎጂዎችን በመለማመድ ላይ እገኛለሁ።">Through personal projects and continuous learning, I am gaining practical experience with modern web technologies while working toward becoming a skilled software developer, aiming to contribute to meaningful projects that make a positive impact.</p>
+                <a href="#contact" class="btn" data-en="Get in Touch" data-am="ያግኙን">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title" data-en="My Skills & Proficiency" data-am="ችሎታዎቼ እና ደረጃቸው">My Skills & Proficiency</h2>
+        <p class="section-subtitle" data-en="Technologies and tools I work with, represented with dynamic skill levels" data-am="የምጠቀምባቸው ቴክኖሎጂዎች እና የክህሎት ደረጃቸው">Technologies and tools I work with, represented with dynamic skill levels</p>
+        
+        <div class="skills-container">
+            <!-- HTML -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-html5-plain colored"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <span class="skill-percentage">90%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="90%"></div>
+                </div>
+            </div>
+
+            <!-- CSS -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-css3-plain colored"></i>
+                        <span>CSS3 / Responsive Design</span>
+                    </div>
+                    <span class="skill-percentage">85%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="85%"></div>
+                </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="80%"></div>
+                </div>
+            </div>
+
+            <!-- React -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-react-original colored"></i>
+                        <span>React.js</span>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="75%"></div>
+                </div>
+            </div>
+
+            <!-- Node.js & Express -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-nodejs-plain colored"></i>
+                        <span>Node.js & Express</span>
+                    </div>
+                    <span class="skill-percentage">75%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="75%"></div>
+                </div>
+            </div>
+
+            <!-- PostgreSQL -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <span>PostgreSQL & Databases</span>
+                    </div>
+                    <span class="skill-percentage">70%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="70%"></div>
+                </div>
+            </div>
+
+            <!-- C++ -->
+            <div class="skill-bar-card">
+                <div class="skill-info">
+                    <div class="skill-name-area">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                        <span>C++ (High-Performance Finance Tracking)</span>
+                    </div>
+                    <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-line-bg">
+                    <div class="progress-line-fill" data-width="80%"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Assistant Integration Box -->
+        <div class="ai-feature-box">
+            <h3 data-en="🤖 Integrated AI Assistant Feature" data-am="🤖 የተቀናጀ አርቴፊሻል ኢንተለጀንት (AI) ረዳት">🤖 Integrated AI Assistant Feature</h3>
+            <p data-en="Interactive chatbot module built to answer queries, help users search content, and offer dynamic assistance across the platform." data-am="ተጠቃሚዎች ጥያቄዎችን እንዲጠይቁ እና መረጃዎችን በፍጥነት እንዲያገኙ የሚያስችል ዘመናዊ የ AI ረዳት ስርዓት።">Interactive chatbot module built to answer queries, help users search content, and offer dynamic assistance across the platform.</p>
+            <div class="ai-chat-simulator" id="aiSimulatorText">
+                > AI Assistant initialized: Ready to assist users with navigation and queries...
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title" data-en="Projects" data-am="ፕሮጀክቶች">Projects</h2>
+        <p class="section-subtitle" data-en="A showcase of my recent applications with dedicated literature and historical records" data-am="የቅርብ ጊዜ ፕሮጀክቶቼ ዝርዝር (ታሪካዊ እና ዘመናዊ የጽሑፍ ስራዎችን ጨምሮ)">A showcase of my recent applications with dedicated literature and historical records</p>
+        <div class="project-filters">
+            <button class="filter-btn active" onclick="filterProjects('all', event)" data-en="All Projects" data-am="ሁሉም ፕሮጀክቶች">All Projects</button>
+            <button class="filter-btn" onclick="filterProjects('fullstack', event)" data-en="Full-Stack & Systems" data-am="ፉል-ስታክ እና ሲስተምስ">Full-Stack & Systems</button>
+            <button class="filter-btn" onclick="filterProjects('frontend', event)" data-en="Frontend" data-am="ፍሮን-ኤንድ">Frontend</button>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1: Digital Library -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-img-box">
+                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
+                    <img src="image_db677d.jpg" alt="Digital Library Website Cover">
+                </div>
+                <div class="project-info">
+                    <h3 data-en="Digital Library Website (Amharic & English Legends)" data-am="የዲጂታል ቤተ መጻሕፍት ድር ጣቢያ (ታሪካዊ እና ዘመናዊ ስራዎች)">Digital Library Website (Amharic & English Legends)</h3>
+                    <p data-en="An interactive repository featuring complete literary genres, hosting historical and recent Amharic and English books, articles, journals, and legendary publications with built-in PDF rendering." data-am="በአማርኛ እና በእንግሊዝኛ የተጻፉ የታሪክ ባለጸጋ መጻሕፍትን፣ ጆርናሎችን እና ድንቅ ጽሑፎችን የያዘ ዲጂታል ቤተ መጻሕፍት መተግበሪያ።">An interactive repository featuring complete literary genres, hosting historical and recent Amharic and English books, articles, journals, and legendary publications with built-in PDF rendering.</p>
+                    <div class="tech-stack">React • Node.js • Express • PostgreSQL • PDF.js</div>
+                    <a href="https://github.com/zepora-dan/Digital-library-website" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                </div>
+            </div>
+            <!-- Project 2: FinFlow App -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-img-box">
+                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
+                    <img src="image_db677d.jpg" alt="FinFlow Application Cover">
+                </div>
+                <div class="project-info">
+                    <h3 data-en="FinFlow Application" data-am="ፊንፍሎው መተግበሪያ">FinFlow Application</h3>
+                    <p data-en="A robust financial management application engineered to track transactional cash flows, monitor budgets, and deliver comprehensive analytical insights." data-am="የገንዘብ ዝውውርን፣ በጀትን እና የፋይናንስ ሪፖርቶችን ለመቆጣጠር የሚያስችል ዘመናዊ መተግበሪያ።">A robust financial management application engineered to track transactional cash flows, monitor budgets, and deliver comprehensive analytical insights.</p>
+                    <div class="tech-stack">React • Node.js • Express • PostgreSQL</div>
+                    <a href="https://github.com/zepora-dan/FinFlow" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                </div>
+            </div>
+            <!-- Project 3: Finance Tracking System -->
+            <div class="project-card" data-category="fullstack">
+                <div class="project-img-box">
+                    <div class="cover-badge" data-en="Cover Page" data-am="የሽፋን ገጽ">Cover Page</div>
+                    <img src="image_db677d.jpg" alt="Finance Tracking System Cover">
+                </div>
+                <div class="project-info">
+                    <h3 data-en="High-Performance Finance Tracker" data-am="ከፍተኛ ፍጥነት ያለው የፋይናንስ መከታተያ">High-Performance Finance Tracker</h3>
+                    <p data-en="A high-efficiency command-line and desktop financial tracking mechanism optimized using C++ for rapid data processing and secure ledger storage." data-am="በ C++ የተገነባ ከፍተኛ ፍጥነት እና ደህንነት ያለው የፋይናንስ መዝገብ መቆጣጠሪያ ስርዓት።">A high-efficiency command-line and desktop financial tracking mechanism optimized using C++ for rapid data processing and secure ledger storage.</p>
+                    <div class="tech-stack">C++ • Data Structures • File I/O</div>
+                    <a href="https://github.com/zepora-dan" target="_blank" class="btn" data-en="GitHub Repository" data-am="ጊትሃብ ማከማቻ">GitHub Repository</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title" data-en="Education" data-am="ትምህርት">Education</h2>
+        <p class="section-subtitle" data-en="Academic background and qualifications" data-am="የተማርኩባቸው ተቋማት እና የትምህርት ደረጃ">Academic background and qualifications</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 data-en="BSc in Software Engineering" data-am="የሶፍትዌር ኢንጂነሪንግ ባችለር ዲግሪ">BSc in Software Engineering</h3>
+                <span data-en="Dire Dawa University | Expected Graduation" data-am="ድሬዳዋ ዩኒቨርሲቲ">Dire Dawa University | Expected Graduation</span>
+                <p data-en="Focusing on core software architecture, data structures, algorithm design, full-stack web applications, and database engineering." data-am="በሶፍትዌር አርክቴክቸር፣ በአልጎሪዝም ዲዛይን እና በድር መተግበሪያዎች ልማት ላይ በማተኮር ላይ ትገኛለች።"></p>
+                <p style="margin-top: 1rem; font-style: italic; color: var(--text-color);" data-en="My academic journey at Dire Dawa University has been an inspiring crucible of discovery, transforming complex theoretical paradigms into tangible, real-world technological solutions. Through intensive collaboration, rigorous analytical study, and an unwavering commitment to writing clean, maintainable code, I continue to expand my engineering capabilities to design impactful systems that solve modern challenges." data-am="በድሬዳዋ ዩኒቨርሲቲ የነበረኝ የትምህርት ጉዞ ውስብስብ ንድፈ ሃሳቦችን ወደ እውነተኛ የቴክኖሎጂ መፍትሄዎች በመቀየር ረገድ ትልቅ አስተዋጽኦ አድርጓል። የተሻለ እና ንጹህ ኮድ በመጻፍ ዘመናዊ ችግሮችን የሚፈቱ ስርዓቶችን ለመንደፍ ያለኝን አቅም በየጊዜው እያዳበርኩ እገኛለሁ።">My academic journey at Dire Dawa University has been an inspiring crucible of discovery, transforming complex theoretical paradigms into tangible, real-world technological solutions. Through intensive collaboration, rigorous analytical study, and an unwavering commitment to writing clean, maintainable code, I continue to expand my engineering capabilities to design impactful systems that solve modern challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title" data-en="Experience & Leadership" data-am="ልምድ እና አመራር">Experience & Leadership</h2>
+        <p class="section-subtitle" data-en="Practical industry exposure, technical contributions, and collaborative teamwork" data-am="ተግባራዊ የሥራ ልምድ እና የቡድን ትብብር">Practical industry exposure, technical contributions, and collaborative teamwork</p>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3 data-en="Full-Stack Web Development Lead & Student Developer" data-am="ፉል-ስታክ ዌብ ዴቨሎፕመንት ሊንክ እና የተማሪ ዴቨሎፐር">Full-Stack Web Development Lead & Student Developer</h3>
+                <span data-en="Academic & Independent Engineering Portfolios | 2025 - Present" data-am="የአካዳሚክ እና የግል ምህንድስና ስራዎች | 2025 - አሁን">Academic & Independent Engineering Portfolios | 2025 - Present</span>
+                <p data-en="Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components." data-am="የተሟላ የ ሶፍትዌር ልማት ሂደቶችን በመምራት፣ ጠንካራ ዳታቤዝ ዲዛይን እና ዘመናዊ የፍሮንት-ኤንድ መዋቅርዎችን ገንባለች።">Spearheaded the complete software lifecycle for diverse full-stack web architectures, managing robust database design, RESTful API integrations, and responsive frontend components.</p>
+                <p style="margin-top: 0.8rem;" data-en="Engineered high-performance database tables in PostgreSQL, built secure backend routing with Node.js and Express, and seamlessly integrated interactive PDF document rendering utilities to support extensive literary archives." data-am="በ PostgreSQL ላይ ጠንካራ ዳታቤዝ በመገንባት፣ በ Node.js እና Express የተደገፈ የባክ-ኤንድ ራውቲንግ እና የሰነድ እይታ መተግበሪያዎችን አበልልታለች።">Engineered high-performance database tables in PostgreSQL, built secure backend routing with Node.js and Express, and seamlessly integrated interactive PDF document rendering utilities to support extensive literary archives.</p>
+            </div>
+            <div class="timeline-item">
+                <h3 data-en="Collaborative Software Engineering Contributor" data-am="የትብብር ሶፍትዌር ኢንጂነሪንግ አባል">Collaborative Software Engineering Contributor</h3>
+                <span data-en="University Tech Workshops & Peer Programming | 2024 - Present" data-am="የዩኒቨርሲቲ የቴክኖሎጂ ስልጠናዎች | 2024 - አሁን">University Tech Workshops & Peer Programming | 2024 - Present</span>
+                <p data-en="Engaged in peer code reviews, collaborative version control workflows using Git/GitHub, and systematic debugging sessions to resolve complex compilation and package integration errors." data-am="የ ኮድ ግምገማዎችን በማካሄድ፣ በ Git እና GitHub አማካኝነት የቡድን ስራዎችን በመስራት እና የቴክኒክ ችግሮችን በመፍታት ላይ ሰርታለች።">Engaged in peer code reviews, collaborative version control workflows using Git/GitHub, and systematic debugging sessions to resolve complex compilation and package integration errors.</p>
+                <p style="margin-top: 0.8rem;" data-en="Focused on applying object-oriented design patterns, writing modular and reusable code snippets, and maintaining high performance standards across both desktop and web applications." data-am="የኦብጀክት-ኦሪንቴድ ዲዛይን ቅጦችን በመጠቀም ንጹህ እና እንደገና ጥቅም ላይ ሊውሉ የሚችሉ ኮዶችን በመጻፍ ላይ ትኩረት አድርጋለች።">Focused on applying object-oriented design patterns, writing modular and reusable code snippets, and maintaining high performance standards across both desktop and web applications.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title" data-en="Get In Touch" data-am="ያግኙኝ">Get In Touch</h2>
+        <p class="section-subtitle" data-en="Have a project in mind or want to collaborate? Let's connect!" data-am="ጥያቄ አለዎት ወይስ አብረውን መስራት ይፈልጉ ይሆን? ያግኙን!"></p>
+        <div class="contact-container">
+            <p data-en="I am always open to discussing new software development opportunities, web engineering projects, or tech collaborations." data-am="አዳዲስ የሶፍትዌር ልማት ስራዎችን እና የትብብር ጥያቄዎችን ለመቀበል ዝግጁ ነኝ።"></p>
+            <div class="contact-links">
+                <a href="mailto:deborah@example.com" class="btn" data-en="Email Me" data-am="ኢሜይል ይላኩ">Email Me</a>
+                <a href="https://github.com/zepora-dan" target="_blank" class="btn btn-outline" data-en="GitHub Profile" data-am="ጊትሃብ ገጽ">GitHub Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p data-en="© 2026 Deborah Daniel. Built with passion and code." data-am="© 2026 ደቦራ ዳንኤል. ሁሉም መብቶች የተጠበቁ ናቸው።">&copy; 2026 Deborah Daniel. Built with passion and code.</p>
+        <div class="social-footer">
+            <a href="https://github.com/zepora-dan" target="_blank" data-en="GitHub" data-am="ጊትሃብ">GitHub</a>
+            <a href="#contact" data-en="Contact" data-am="አግኙኝ">Contact</a>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button onclick="topFunction()" id="topBtn" title="Go to top">&uarr;</button>
+
+    <!-- JavaScript for Interactivity, Translations, and Theme Toggle -->
+    <script>
+        // Animate progress bars on load
+        window.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const fills = document.querySelectorAll('.progress-line-fill');
+                fills.forEach(fill => {
+                    fill.style.width = fill.getAttribute('data-width');
+                });
+            }, 300);
+        });
+
+        // Theme Toggle Logic
+        function toggleTheme() {
+            const html = document.documentElement;
+            const btn = document.getElementById('themeToggleBtn');
+            if (html.getAttribute('data-theme') === 'dark') {
+                html.setAttribute('data-theme', 'light');
+                btn.textContent = '☀️';
+            } else {
+                html.setAttribute('data-theme', 'dark');
+                btn.textContent = '🌙';
+            }
+        }
+
+        // Language Switcher Logic
+        function switchLanguage(lang) {
+            const elements = document.querySelectorAll('[data-en]');
+            elements.forEach(el => {
+                if (lang === 'am' && el.getAttribute('data-am')) {
+                    el.textContent = el.getAttribute('data-am');
+                } else if (lang === 'en' && el.getAttribute('data-en')) {
+                    el.textContent = el.getAttribute('data-en');
+                }
+            });
+            document.documentElement.lang = lang;
+        }
+
+        // Project Filtering Logic
+        function filterProjects(category, event) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const cards = document.querySelectorAll('.project-card');
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Back to top button logic
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            const topBtn = document.getElementById("topBtn");
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>
